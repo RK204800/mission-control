@@ -27,7 +27,7 @@ export default function TasksPage() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [filter, setFilter] = useState<"all" | "todo" | "in-progress" | "done">("all");
-  const [newTask, setNewTask] = useState({ title: "", assignee: "", priority: "medium" as const });
+  const [newTask, setNewTask] = useState<{ title: string; assignee: string; priority: Task["priority"] }>({ title: "", assignee: "", priority: "medium" });
 
   const filteredTasks = filter === "all" ? tasks : tasks.filter(t => t.status === filter);
 
