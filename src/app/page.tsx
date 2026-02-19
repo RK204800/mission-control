@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowRight, Bot, CheckCircle, Clock, FileText } from "lucide-react";
+import { ArrowRight, Bot, Clock, FileText } from "lucide-react";
 import Link from "next/link";
 
 // Demo data for tasks
@@ -37,7 +37,7 @@ export default function HomePage() {
       .then(res => res.json())
       .then(data => {
         if (data.files) {
-          setRecentMemory(data.files.slice(0, 3).map((f: any) => f.name));
+          setRecentMemory(data.files.slice(0, 3).map((f: unknown) => f.name));
         }
       })
       .catch(() => {});

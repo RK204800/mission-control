@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, FileText, Folder, ChevronRight, X, Calendar } from "lucide-react";
+import { Search, FileText, Folder, ChevronRight, X } from "lucide-react";
 
 interface MemoryFile {
   name: string;
