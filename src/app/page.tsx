@@ -37,7 +37,7 @@ export default function HomePage() {
       .then(res => res.json())
       .then(data => {
         if (data.files) {
-          setRecentMemory(data.files.slice(0, 3).map((f: unknown) => f.name));
+          setRecentMemory(data.files.slice(0, 3).map((f: { name?: string }) => f.name));
         }
       })
       .catch(() => {});

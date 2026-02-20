@@ -1,0 +1,209 @@
+{
+  "records": [
+    {
+      "id": "1",
+      "date": "2026-02-20T10:00:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 15000,
+      "outputTokens": 3500,
+      "cost": 0.037,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "2",
+      "date": "2026-02-19T14:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 22000,
+      "outputTokens": 5100,
+      "cost": 0.0542,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "3",
+      "date": "2026-02-18T09:15:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 18500,
+      "outputTokens": 4200,
+      "cost": 0.0454,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "4",
+      "date": "2026-02-17T16:45:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 12000,
+      "outputTokens": 2800,
+      "cost": 0.0296,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "5",
+      "date": "2026-02-16T11:20:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 25000,
+      "outputTokens": 6000,
+      "cost": 0.062,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "6",
+      "date": "2026-02-15T08:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 19000,
+      "outputTokens": 4500,
+      "cost": 0.047,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "7",
+      "date": "2026-02-14T13:00:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 28000,
+      "outputTokens": 7200,
+      "cost": 0.0704,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "8",
+      "date": "2026-02-13T10:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 16000,
+      "outputTokens": 3800,
+      "cost": 0.0396,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "9",
+      "date": "2026-02-12T15:45:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 21000,
+      "outputTokens": 4900,
+      "cost": 0.0518,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "10",
+      "date": "2026-02-11T09:00:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 14000,
+      "outputTokens": 3200,
+      "cost": 0.0344,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "11",
+      "date": "2026-02-10T12:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 17500,
+      "outputTokens": 4100,
+      "cost": 0.0432,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "12",
+      "date": "2026-02-09T14:00:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 19500,
+      "outputTokens": 4600,
+      "cost": 0.0482,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "13",
+      "date": "2026-02-08T11:15:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 13000,
+      "outputTokens": 3000,
+      "cost": 0.032,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "14",
+      "date": "2026-02-07T16:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 24000,
+      "outputTokens": 5500,
+      "cost": 0.059,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "15",
+      "date": "2026-02-06T10:45:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 17000,
+      "outputTokens": 3900,
+      "cost": 0.0418,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "16",
+      "date": "2026-02-05T13:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 20000,
+      "outputTokens": 4700,
+      "cost": 0.0494,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "17",
+      "date": "2026-02-04T09:45:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 15500,
+      "outputTokens": 3600,
+      "cost": 0.0382,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "18",
+      "date": "2026-02-03T15:00:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 23000,
+      "outputTokens": 5300,
+      "cost": 0.0566,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "19",
+      "date": "2026-02-02T11:30:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 18000,
+      "outputTokens": 4100,
+      "cost": 0.0442,
+      "sessionId": "main-session"
+    },
+    {
+      "id": "20",
+      "date": "2026-02-01T14:15:00Z",
+      "provider": "openrouter",
+      "model": "minimax/minimax-m2.5",
+      "inputTokens": 16500,
+      "outputTokens": 3800,
+      "cost": 0.0406,
+      "sessionId": "main-session"
+    }
+  ],
+  "models": {
+    "minimax/minimax-m2.5": { "input": 0.2, "output": 0.2 },
+    "openrouter/anthropic/claude-3.5-sonnet": { "input": 3.0, "output": 15.0 },
+    "openrouter/openai/gpt-4o": { "input": 2.5, "output": 10.0 }
+  }
+}

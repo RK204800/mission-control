@@ -10,7 +10,8 @@ import {
   Bot, 
   Calendar,
   Settings,
-  Zap
+  Zap,
+  DollarSign
 } from "lucide-react";
 
 const navItems = [
@@ -20,6 +21,7 @@ const navItems = [
   { href: "/agents", label: "Agents", icon: Bot },
   { href: "/team", label: "Team", icon: Users },
   { href: "/calendar", label: "Calendar", icon: Calendar },
+  { href: "/costs", label: "Costs", icon: DollarSign },
 ];
 
 export default function Sidebar() {

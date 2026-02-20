@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, createContext, useContext, useState, useEffect } from "react";
-import { Activity, Cpu, Clock, CheckCircle } from "lucide-react";
+import { Activity, Cpu, Clock, CheckCircle, AlertTriangle } from "lucide-react";
 
 interface SystemStats {
   activeAgents: number;
@@ -10,13 +10,20 @@ interface SystemStats {
   uptime: string;
 }
 
+interface HealthStatus {
+  healthy: boolean;
+  lastCheck: string | null;
+}
+
 interface DashboardContextType {
   stats: SystemStats;
+  health: HealthStatus;
   refreshStats: () => void;
 }
 
 const DashboardContext = createContext<DashboardContextType>({
   stats: { activeAgents: 2, pendingTasks: 5, completedToday: 12, uptime: "99.9%" },
+  health: { healthy: true, lastCheck: null },
   refreshStats: () => {},
 });
 
@@ -30,6 +37,8 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     uptime: "99.9%",
   });
 
+  const [health, setHealth] = useState<HealthStatus>({ healthy: true, lastCheck: null });
+
   const refreshStats = async () => {
     try {
       const res = await fetch("/api/workspace/stats");
@@ -42,9 +51,25 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     }
   };
 
+  const refreshHealth = async () => {
+    try {
+      const res = await fetch("/api/health");
+      if (res.ok) {
+        const data = await res.json();
+        setHealth(data);
+      }
+    } catch (e) {
+      setHealth({ healthy: false, lastCheck: null });
+    }
+  };
+
   useEffect(() => {
     refreshStats();
-    const interval = setInterval(refreshStats, 30000);
+    refreshHealth();
+    const interval = setInterval(() => {
+      refreshStats();
+      refreshHealth();
+    }, 30000);
     return () => clearInterval(interval);
   }, []);
 
@@ -56,8 +81,17 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   ];
 
   return (
-    <DashboardContext.Provider value={{ stats, refreshStats }}>
-      <div className="min-h-screen">
+    <DashboardContext.Provider value={{ stats, health, refreshStats }}>
+      <div className={`min-h-screen transition-colors duration-500 ${!health.healthy ? 'bg-red-950' : ''}`}>
+        {/* Health Alert Banner */}
+        {!health.healthy && (
+          <div className="bg-red-600 text-white px-4 py-3 flex items-center justify-center gap-3 animate-pulse">
+            <AlertTriangle className="w-5 h-5" />
+            <span className="font-semibold">SYSTEM DOWN — Gateway Unreachable</span>
+            <span className="text-red-200 text-sm">Last check: {health.lastCheck || 'unknown'}</span>
+          </div>
+        )}
+
         {/* Stats Bar */}
         <div className="grid grid-cols-4 gap-4 mb-8">
           {statCards.map((stat) => (
